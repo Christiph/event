@@ -164,7 +164,12 @@ class Run_2_content_Form(QtGui.QMainWindow):
 
         button = customMsgBox.clickedButton()
         if button == okButton:
-            self.delete_no_use()   # 执行一键删除
+            try:
+                self.delete_no_use()   # 执行一键删除
+            except Exception, ex:
+                print "[连接中断] ", ex, " 已重新建立连接"
+                self.mysql_conn = mysql.MYSQL()
+                self.delete_no_use()  # 执行一键删除
             self.content.setText(unicode("无效事件已剔除！"))
         elif button == cancelButton:
             self.content.setText(unicode("已取消！"))

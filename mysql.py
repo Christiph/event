@@ -14,7 +14,7 @@ import MySQLdb
 
 class MYSQL:
     def __init__(self):
-        self.con = MySQLdb.connect(host='61.147.*.*',user='news',passwd='news',db='news',port=3306,charset='utf8')
+        self.con = MySQLdb.connect(host='61.147.114.76',user='news',passwd='news',db='news',port=3306,charset='utf8')
         self.cursor = self.con.cursor()
 
     def close(self):
