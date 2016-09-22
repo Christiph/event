@@ -47,7 +47,7 @@ time_end_old = 1463846400000         # 4月16号的时间戳
 def clear(self):
     self.events_array = []
     self.current_index = 0
-    self.news_titles = u"相关新闻如下:"
+    self.news_titles = u"相关新闻如下: "
     self.ID = -1
     self.name = ''
     self.news = ''
