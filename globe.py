@@ -1,6 +1,6 @@
-#coding:utf-8
-#-*- coding: UTF-8 -*- 。
-#-------------------------------------------------------------------------------
+# coding:utf-8
+# -*- coding: UTF-8 -*- 。
+# -------------------------------------------------------------------------------
 # Name:        全局变量模块
 # Purpose:
 #
@@ -9,8 +9,8 @@
 # Created:     21/06/2016
 # Copyright:   (c) Administrator 2016
 # Licence:     <your licence>
-#-------------------------------------------------------------------------------
-import MySQLdb
+# -------------------------------------------------------------------------------
+import timestamp
 
 # 保存所有的事件实体对象
 events_array = []
@@ -26,8 +26,8 @@ valid = ''
 news_titles = u"相关新闻如下:"
 
 # 时间戳
-time = 0            # 当前系统时间戳  1456848000000
-time_seven = 0      # 7天之前的时间戳
+time = 0  # 当前系统时间戳  1456848000000
+time_seven = 0  # 7天之前的时间戳
 
 # 配置参数
 delete_path = "D:\\[8]RunEvent\\out\\delete.txt"
@@ -40,8 +40,9 @@ seven = 300
 flag_delete = False
 
 # 干预历史数据
-time_start_old = 1463241600000       # 4月1号的时间戳
-time_end_old = 1463846400000         # 4月16号的时间戳
+time_start_old = timestamp.time_stamp("2016-10-12 8:00:00")  # 10月12日8时
+time_end_old = timestamp.time_stamp("2016-10-13 8:00:00")    # 10月13日8时
+
 
 # 全局变量初始化
 def clear(self):
